@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js h-100" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>New Post</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/style2.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body class="h-100" style="overflow-x: hidden;">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Main Sidebar -->
+                <aside class="main-sidebar col-lg-2 px-0">
+                    <div class="main-navbar">
+                        <nav class="navbar navbar-light bg-white  border-bottom p-0">
+                            <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
+                                <img id="main-logo" style="width:80%;padding: 5px; position:relative;left: 10%;top: 1%;" src="images/ssn_logo.png" alt="Shiv Nadar University">
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="nav_drawer"></div>
+                </aside>
+                <!-- End Main Sidebar -->
+
+                <main class="main-content col-lg-10 p-0 offset-lg-2 ">
+                    <div class="main-navbar sticky-top bg-white">
+                        <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+                            <form class="main-navbar__search d-none d-md-flex d-lg-flex" style="width:65% !important;">
+                                <div class="ml-3 input-group input-group-seamless"><div class="input-group-prepend"></div></div>
+                                <p id="access" class=" btn99" style="position: relative; display: none;left: 22%;padding-top: 1.0%;width: 20%;color:#317bc0;margin-top:1.0%;margin-bottom:1.0%;"><b>Super Admin</b></p>
+                            </form>
+
+                            <div>
+                                <a>
+                                    <img id="dp_url" src="images/user.png" class="rounded-circle" style="position:absolute;left:82%;top:3.5%; margin-top:5px; width: 3.5%">
+                                    <p style="position:absolute;left:86%;margin-top:11px; top:3.5%;font-size:13px;"><b id="name"></b></p>
+                                    <p id="position" style="position:absolute;left:86%;margin-top:6px; top:45%;font-size:10px;"></p>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="main-content-container px-4">
+                        <div class="page-header">
+                            <br/>
+                            <div class="col-12 text-center text-sm-left ">
+                                <h4 style="position:relative; left:-1%;"><b>Create a new post</b></h4>
+                                <br/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-7" >
+                                <div class="card card-small mb-3">
+                                    <div class="card-body" style="background-color:#ffffff; margin-top: -10px; border-color:white; box-shadow: 2px 2px 6px 0.5px lightgrey; border-radius:1%;">
+                                        <form class="add-new-post">
+                                            <input class="form-control form-control-lg" type="text" placeholder="Title" id="title" oninput="phoneTitleChange(this.value)" style="background-color:#ffffff; border-color:light grey;" required>
+                                            </br>
+                                            <textarea class="form-control form-control-lg" type="text" placeholder="Content" style="height: 200px;resize:none;background-color:#ffffff;border-color:light grey;" id="content" oninput="phoneContentChange(this.value)" required></textarea>
+
+                                            <div>
+                                                <div class="post_visibility"><b>Year :</b></div>
+                                                <div class="form-group">
+                                                    <input type="checkbox" class="checkbox" id="year1">
+                                                    <label for="year1">I</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="year2">
+                                                    <label for="year2">II</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="year3">
+                                                    <label for="year3">III</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="year4">
+                                                    <label for="year4">IV</label><input type="checkbox" onchange='yearChange(this);' class="checkbox" id="year_all">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;
+
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <label for="year_all">All Year</label>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <div class="post_visibility" style="margin-top: -20px;"><b>Department :</b></div>
+                                                <div class="form-group" style="margin-top: 3px">
+                                                    <input type="checkbox" class="checkbox" id="cse">
+                                                    <label for="cse">CSE</label>
+                                                    &nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="it">
+                                                    <label for="it">IT</label>
+                                                    &nbsp;
+                                                    &nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="mec">
+                                                    <label for="mec">MEC</label>
+                                                    &nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="bme">
+                                                    <label for="bme">BME</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;
+
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                    <input type="checkbox" class="checkbox" onchange='deptChange(this);' id="dept_all">
+                                                    <label for="dept_all">All Dept</label>
+                                                    </br>
+                                                    <input type="checkbox" class="checkbox" id="ece">
+                                                    <label for="ece">ECE</label>
+                                                    &nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="eee">
+                                                    <label for="eee">EEE</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" class="checkbox" id="civ">
+                                                    <label for="civ">CIV</label>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;
+                                                    &nbsp;
+                                                    <input type="checkbox" class="checkbox" id="che">
+                                                    <label for="che">CHE</label>
+                                                </div>
+                                            </div>
+
+                                            <div>
+                                                <input type="file" id="inputFile" multiple>
+                                            </div>
+                                            </br>
+                                            <a href="#" id="post" class="btn btn-outline-secondary" style="color: #317bc0;"><b>PUBLISH</b></a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5" style="left:7% !important;pointer-events: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+                                <img id="phone_dp_url" class="user-avatar rounded-circle" src="images/user.png" style="position:absolute;left:22%;top: 2.5%;font-size:10px;width:6.5%;height:6%"/>
+                                <p style="position:absolute;left:30%;top:3.5%;font-size:10px;width:50%;height:40%" ><b id="phone_name"></b></p>
+                                <p id="phone_position" style="position:absolute;left:30%;top:5.8%;font-size:8px;width:50%;height:40%" ></p>
+                                <textarea id="phone_title" style="position:absolute;left:16.5%;top:11.5%;font-size:10px;width:45%;height:5%;border:none;font-weight:bold;resize:none;overflow:hidden;" placeholder="Title" readonly></textarea>
+                                <textarea id="phone_content" style="position:absolute;left:16.5%;top:18%;font-size:10px;width:45%;height:40%;border:none;resize:none;" placeholder="Content" readonly></textarea>
+                                <img src="images/phone_screen.png" width="55%" style="margin-left: 10%;"/>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!--Place at the end inside body in the same order-->
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase.js"></script>
+        <script src="scripts/firebase_initialization.js"></script>
+        <script src="scripts/faculty_new_post.js"></script>
+    </body>
+</html>

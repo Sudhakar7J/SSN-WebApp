@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SSNCE Portal</title>
+
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Bootstrap CSS / Color Scheme -->
+
+    <link rel="stylesheet" href="styles/style.css" id="theme-color">
+</head>
+<body data-spy="scroll" data-target="#lambda-navbar" data-offset="0">
+
+<!--navigation-->
+
+<nav class="navbar navbar-expand-md navbar-dark navbar-transparent fixed-top sticky-navigation" id="lambda-navbar">
+    <div class="header">
+        <img src="images/ssn_logo.png" alt="logo" style="max-width: 15%;position:absolute;left:2.5%;"/>
+        <h1></h1>
+    </div>
+    <a class="navbar-brand" href="index.html">
+
+    </a>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span data-feather="menu"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+
+        </ul>
+        <form class="form-inline">
+            <a href="#" id="login" class="btn btn-outline-secondary btn-navbar page-scroll">SIGN IN</a>
+        </form>
+    </div>
+</nav>
+
+<!--Main page-->
+<section class="py-7 py-md-0 bg-hero" id="home"
+         style="background-size:100% 100%;
+            background-repeat: no-repeat;background-image: url('images/login.jpg')">
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="col-md-7 my-md-auto text-center text-md-left">
+                <h1 class="display-3 text-white font-weight-bold">SSNCE <br> Faculty Portal</h1>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.0/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<!--Firebase Integration-->
+<!--Place at the end inside body in the same order-->
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-firestore.js"></script>
+<script src="scripts/firebase_initialization.js"></script>
+<script src="scripts/login.js"></script>
+</body>
+</html>

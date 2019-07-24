@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SSN Web Console</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/style2.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body class="h-100">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Main Sidebar -->
+                <aside class="main-sidebar col-lg-2 px-0">
+                    <div class="main-navbar">
+                        <nav class="navbar navbar-light bg-white  border-bottom p-0">
+                            <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
+                                <img id="main-logo" style="width:80%;padding: 5px; position:relative;left: 10%;top: 1%;" src="images/ssn_logo.png" alt="Shiv Nadar University">
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="nav_drawer"></div>
+                </aside>
+                <!-- End Main Sidebar -->
+
+                <main class="main-content col-lg-10 p-0 offset-lg-2 ">
+                    <div class="main-navbar sticky-top bg-white">
+                        <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+                            <form class="main-navbar__search d-none d-md-flex d-lg-flex" style="width:65% !important;">
+                                <div class="ml-3 input-group input-group-seamless">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="material-icons">search</i></span>
+                                    </div>
+                                    <input placeholder="Search for new posts..." class="form-control">
+                                </div>
+                                <p id="access" class=" btn99" style="position: relative;left: 22%;padding-top: 1.0%;width: 20%;color:#317bc0;margin-top:1.0%;margin-bottom:1.0%;"><b></b></p>
+                            </form>
+
+                            <div>
+                                <a>
+                                    <img id="dp_url" src="images/user.png" class="rounded-circle" style="position:absolute;left:82%;top:3.5%; margin-top:5px; width: 3.5%">
+                                    <p style="position:absolute;left:86%;margin-top:11px; top:3.5%;font-size:13px;"><b id="name"></b></p>
+                                    <p id="position" style="position:absolute;left:86%;margin-top:6px; top:45%;font-size:10px;"></p>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- End main-navbar -->
+
+                    <div class="main-content-container px-4">
+                        <div class="page-header">
+                            <br/>
+                            <div class="col-12 text-center text-sm-left">
+                                <h4 style="position:relative; left:-1%; margin-bottom: 25px"><b>Sent Posts</b></h4>
+                            </div>
+                        </div>
+
+                        <ul id="post_list" style="list-style: none;"></ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!--Place at the end inside body in the same order-->
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase.js"></script>
+        <script src="scripts/firebase_initialization.js"></script>
+        <script src="scripts/faculty_dashboard.js"></script>
+    </body>
+</html>
+
+<!--<li>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-small card-post h-100">
+                <div class="card-post__image" style="height: 220px; background-image: url('images/login.jpg');"></div>
+                <div class="card-body">
+                    <h5 style="margin-right: 80px; margin-top:-10px;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;"><a><b>Hackathon</b></a></h5>
+                    <span id="post_time" style="position: absolute; margin-top: -30px; color: #317bc0; right: 20px">1h ago</span>
+                    <p class="card-text" style=" margin-bottom:-10px;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">A hackathon (also known as a hack day, hackfest or codefest)A hackathon (also known as a hack day, hackfest or codefest)A hackathon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+<br>-->
+
+<!--<li class="nav-item">
+        <a class="nav-link active" href="#">
+            <i class="material-icons">home</i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="faculty_new_post.html">
+            <i class="material-icons">note_add</i>
+            <span>Add New Post</span>
+        </a>
+    </li>-->
